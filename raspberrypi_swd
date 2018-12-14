@@ -1,0 +1,10 @@
+source [find interface/raspberrypi-native.cfg]
+transport select swd
+bcm2835gpio_swd_nums 25 24   # 22-clk   18-swd srst-12
+bcm2835gpio_srst_num 23
+reset_config srst_only
+reset_config srst_nogate
+reset_config srst_open_drain
+reset_config connect_assert_srst
+adapter_nsrst_delay 100
+adapter_nsrst_assert_width 100
